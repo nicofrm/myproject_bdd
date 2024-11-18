@@ -6,7 +6,5 @@ def before_all(context):
     context.browser = Browser()
     context.base_page = BasePage()
 
-
-
 def after_all(context):
     context.browser.close()
