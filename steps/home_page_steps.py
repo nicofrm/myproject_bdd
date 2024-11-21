@@ -7,7 +7,7 @@ def step_impl(context):
 
 @when('I click on the search input and I enter "{search_value}" text')
 def step_impl(context, search_value):
-    context.home_page.enter_text(search_value)
+    context.home_page.enter_search_value(search_value)
 
 @when('I click "{key_entered}"')
 def step_impl(context, key_entered):

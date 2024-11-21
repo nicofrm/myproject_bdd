@@ -6,6 +6,8 @@ from pages.base_page import Base_Page
 class Home_page(Base_Page):
 
     SEARCH_INPUT_BOX = (By.ID, 'search')
+    ACCEPT_COOKIES_BUTTON = (By.CSS_SELECTOR, 'button[class="fc-button fc-cta-consent fc-primary-button"')
+    LOGIN_LINK = (By.LINK_TEXT, 'Sign In')
 
     def navigate_to_login_page(self):
         self.driver.get('https://magento.softwaretestingboard.com/')
@@ -22,3 +24,6 @@ class Home_page(Base_Page):
             self.driver.find_element(*self.ACCEPT_COOKIES_BUTTON).click()
         except:
             pass
+
+    def click_on_sign_in_link(self):
+        self.driver.find_element(*self.LOGIN_LINK).click()
