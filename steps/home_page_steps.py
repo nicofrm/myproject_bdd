@@ -13,4 +13,6 @@ def step_impl(context, search_value):
 def step_impl(context, key_entered):
     context.home_page.enter_key_from_keyword(key_entered)
 
-
+@when('I click on the sign in link')
+def step_impl(context):
+    context.home_page.click_on_sign_in_link()
