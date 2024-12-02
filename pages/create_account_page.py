@@ -16,18 +16,18 @@ class CreateAccountPage(Base_Page):
     def click_account_link(self):
         self.driver.find_element(*self.CREATE_ACCOUNT_LINK).click()
 
-    def insert_first_name(self, first_name):
+    def insert_first_name_name(self, first_name):
         self.enter_text(*self.FIRST_NAME_INPUT, first_name)
 
-    def insert_last_name(self, last_name):
+    def insert_last_name_name(self, last_name):
         self.enter_text(*self.LAST_NAME_INPUT, last_name)
 
-    def insert_email(self, email):
+    def insert_create_account_email(self, email):
         number = random.randint(0, 1000000000000000000000000000000000)
         email_input = str(number) + email
-        self.enter_text(*self.EMAIL_INPUT, email)
+        self.enter_text(*self.EMAIL_INPUT, email_input)
 
-    def insert_password(self, password):
+    def insert_create_account_password(self, password):
         self.enter_text(*self.PASSWORD_INPUT, password)
 
     def insert_confirm_password(self, confirm_password):

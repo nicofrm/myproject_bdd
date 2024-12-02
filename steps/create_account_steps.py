@@ -6,19 +6,19 @@ def step_impl(context):
 
 @when('I insert "{first_name}" on the first name field')
 def step_impl(context, first_name):
-    context.create_account_page.insert_first_name(first_name)
+    context.create_account_page.insert_first_name_name(first_name)
 
 @when('I insert "{last_name}" on the last name field')
 def step_impl(context, last_name):
-    context.create_account_page.insert_last_name(last_name)
+    context.create_account_page.insert_last_name_name(last_name)
 
 @when('I insert "{email}" on the email fields')
 def step_impl(context, email):
-    context.create_account_page.insert_email(email)
+    context.create_account_page.insert_create_account_email(email)
 
 @when('I insert "{password}" on the password field')
 def step_impl(context, password):
-    context.create_account_page.insert_password(password)
+    context.create_account_page.insert_create_account_password(password)
 
 @when('I insert "{confirm_password}" on the confirm password field')
 def step_impl(context, confirm_password):

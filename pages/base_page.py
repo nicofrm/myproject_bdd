@@ -4,7 +4,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 class Base_Page(Browser):
     def enter_text(self, by, value, search_value):
-        if search_value == 'Enter':
-            self.driver.find_element(by, value).send_keys(search_value)
+        self.driver.find_element(by, value).send_keys(search_value)
 
 

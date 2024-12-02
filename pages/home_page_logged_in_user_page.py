@@ -8,7 +8,11 @@ class HomePageLoggedInUserPage(Base_Page):
     CREATE_ACCOUNT_SUCCESS_MESSAGE = (By.CSS_SELECTOR, 'div[data-bind="html: $parent.prepareMessageForHtml(message.text)"]')
     def check_account_created(self):
         current_url = self.driver.current_url
-        actual_message = self.driver.find_element(*self.CREATE_ACCOUNT_SUCCESS_MESSAGE).text
+        actual_message = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(self.CREATE_ACCOUNT_SUCCESS_MESSAGE)).text
+        # actual_message = self.driver.find_element(*self.CREATE_ACCOUNT_SUCCESS_MESSAGE).text
+
+        # actual_message = self.driver.find_element(*self.CREATE_ACCOUNT_SUCCESS_MESSAGE)
+        # actual_message = self.driver.find_element(*self.CREATE_ACCOUNT_SUCCESS_MESSAGE).text
 
         expected_message = 'Thank you for registering with Main Website Store.'
         assert 'create' not in current_url
