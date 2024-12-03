@@ -18,5 +18,3 @@ Feature: This feature will verify the behaviour of the create account functional
     When I click on the Create Account button
     Then The account should be created and the user should be direct to homepage
 
-@T3
-Feature: Verify that when the user inserts invalid data into login field,
