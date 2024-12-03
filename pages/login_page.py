@@ -5,7 +5,7 @@ class LoginPage(Base_Page):
     EMAIL_INPUT = (By.XPATH, '//input[@title="Email"]')
     PASSWORD_INPUT = (By.CSS_SELECTOR, 'input[title="Password"]')
     LOGIN_BUTTON = (By.XPATH, '//fieldset//button[@id="send2"]')
-    EMAIL_ERROR_MESSAGE = (By.XPATH, '//div[@id=email-error" abd @class="mage-error"]')
+    EMAIL_ERROR_MESSAGE = (By.XPATH, '//div[@id="email-error" and @class="mage-error"]')
     def insert_email(self, login_email):
         self.enter_text(*self.EMAIL_INPUT, login_email)
 
