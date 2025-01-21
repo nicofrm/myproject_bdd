@@ -2,6 +2,7 @@ from time import sleep
 from selenium.webdriver.common.by import By
 from pages.base_page import Base_Page
 
+
 class Search_Results_Page(Base_Page):
     SEARCH_RESULTS = (By.XPATH, '//a[@class="product-item-link"]')
 

@@ -4,9 +4,10 @@
 # sa ne logam cu credentiale corecte si sa ne asiguram logarea in aplicatie
 
 
-@T2
+
 Feature: This feature will verify the behaviour of the create account functionality
           in order to ensure proper functionality
+  @T2 @create_account
   Scenario: Verify that when the user inserts valid data into the input fields, then he will be able to create account
     Given I am on magento software testing homepage
     When I click on the Create an Account link
