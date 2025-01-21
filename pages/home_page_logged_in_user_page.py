@@ -9,7 +9,7 @@ class HomePageLoggedInUserPage(Base_Page):
     def check_account_created(self):
         current_url = self.driver.current_url
         actual_message = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(self.CREATE_ACCOUNT_SUCCESS_MESSAGE)).text
-        # actual_message = self.driver.find_element(*self.CREATE_ACCOUNT_SUCCESS_MESSAGE).text
+        actual_message = self.driver.find_element(*self.CREATE_ACCOUNT_SUCCESS_MESSAGE).text
 
         # actual_message = self.driver.find_element(*self.CREATE_ACCOUNT_SUCCESS_MESSAGE)
         # actual_message = self.driver.find_element(*self.CREATE_ACCOUNT_SUCCESS_MESSAGE).text
